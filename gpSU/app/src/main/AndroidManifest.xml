@@ -54,6 +54,11 @@
             android:name=".Maps"
             android:label="@string/title_activity_maps" >
         </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
     </application>
 
 </manifest>

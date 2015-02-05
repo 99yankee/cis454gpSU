@@ -1,9 +1,12 @@
 package com.cis454.gpsu;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class gpSU extends ActionBarActivity {
@@ -12,6 +15,14 @@ public class gpSU extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gp_su);
+
+        Button yourButton = (Button) findViewById(R.id.default_activity_button);
+
+        yourButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(gpSU.this, Maps.class));
+            }
+        });
     }
 
 
