@@ -95,9 +95,7 @@ public class Maps extends FragmentActivity {
         // Create a LatLng object for the current location
         LatLng latLng = new LatLng(latitude, longitude);
 
-        LatLng myCoordinates = new LatLng(latitude, longitude);
-        CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(myCoordinates, 12);
-        mMap.animateCamera(yourLocation);
+
 
         // Show the current location in Google Map
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
