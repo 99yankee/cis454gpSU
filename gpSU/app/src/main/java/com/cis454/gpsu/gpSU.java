@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+
 
 public class gpSU extends ActionBarActivity {
 
@@ -18,12 +20,23 @@ public class gpSU extends ActionBarActivity {
 
         Button yourButton = (Button) findViewById(R.id.default_activity_button);
 
-        yourButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        yourButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 startActivity(new Intent(gpSU.this, Maps.class));
             }
         });
     }
+
+    private void RetrieveWeather() throws IOException {
+
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=syracuse,ny";
+
+        WeatherServiceAsync task = new WeatherServiceAsync(this);
+
+        task.execute(url);
+
+    }
+
 
 
     @Override
@@ -48,3 +61,4 @@ public class gpSU extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
