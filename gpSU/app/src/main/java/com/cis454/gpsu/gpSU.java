@@ -18,21 +18,12 @@ public class gpSU extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gp_su);
 
-        Button yourButton = (Button) findViewById(R.id.button);
-
-        yourButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(gpSU.this, Maps.class));
-
         try{
             RetrieveWeather();
         }
         catch (IOException ioe){
             System.out.println("Error!");
         }
-
-            }
-        });
     }
 
     private void RetrieveWeather() throws IOException {
@@ -69,6 +60,12 @@ public class gpSU extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void sendMessage(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, Maps.class);
+        startActivity(intent);
     }
 
     public void SetDescription(String description) {
