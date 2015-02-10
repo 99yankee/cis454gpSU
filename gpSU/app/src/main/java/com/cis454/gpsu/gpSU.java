@@ -23,6 +23,14 @@ public class gpSU extends ActionBarActivity {
         yourButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(gpSU.this, Maps.class));
+
+        try{
+            RetrieveWeather();
+        }
+        catch (IOException ioe){
+            System.out.println("Error!");
+        }
+
             }
         });
     }
@@ -36,6 +44,8 @@ public class gpSU extends ActionBarActivity {
         task.execute(url);
 
     }
+
+
 
 
 
