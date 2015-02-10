@@ -18,7 +18,7 @@ public class gpSU extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gp_su);
 
-        Button yourButton = (Button) findViewById(R.id.default_activity_button);
+        Button yourButton = (Button) findViewById(R.id.button);
 
         yourButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,6 +59,18 @@ public class gpSU extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void SetDescription(String description) {
+    }
+
+    public void SetTemperature(double temperature) {
+    }
+
+    public void SetPressure(double pressure) {
+    }
+
+    public void SetHumidity(double humidity) {
     }
 }
 

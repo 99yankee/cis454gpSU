@@ -28,7 +28,7 @@ public class WeatherServiceAsync extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String urls) {
+    protected String doInBackground(String[] urls) {
 
 // this weather service method will be called after the service executes.
 // it will run as a seperate process, and will populate the activity in the onPostExecute
@@ -65,10 +65,10 @@ public class WeatherServiceAsync extends AsyncTask<String, Void, String> {
         return response;
     }
 
-    @Override
+    /*@Override
     protected String doInBackground(String... params) {
         return null;
-    }
+    }*/
 
     @Override
     protected void onPostExecute(String result) {
@@ -103,4 +103,5 @@ public class WeatherServiceAsync extends AsyncTask<String, Void, String> {
     private double ConvertTemperatureToFahrenheit(double temperature) {
         return (temperature - 273)* (9/5) + 32;
     }
+
 }
