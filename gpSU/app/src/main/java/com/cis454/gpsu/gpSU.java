@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.IOException;
 
@@ -72,6 +73,7 @@ public class gpSU extends ActionBarActivity {
     }
 
     public void SetTemperature(double temperature) {
+        //TextView view = (TextView) this.findViewById(R.id.text);
     }
 
     public void SetPressure(double pressure) {
