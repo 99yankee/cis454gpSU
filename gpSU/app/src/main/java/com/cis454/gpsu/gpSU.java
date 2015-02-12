@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 
 public class gpSU extends ActionBarActivity {
@@ -70,16 +71,42 @@ public class gpSU extends ActionBarActivity {
     }
 
     public void SetDescription(String description) {
+
+        TextView viewDescription = (TextView) this.findViewById(R.id.textDescriptionValue);
+        viewDescription.setText(description);
+;
     }
 
+
+
     public void SetTemperature(double temperature) {
-        //TextView view = (TextView) this.findViewById(R.id.text);
+        TextView view = (TextView) this.findViewById(R.id.textTemperatureValue);
+
+        DecimalFormat df = new DecimalFormat("###");
+        String formattedTemperature = df.format(temperature);
+
+        view.setText(formattedTemperature + " °F");
     }
 
     public void SetPressure(double pressure) {
+
+        TextView viewPressure = (TextView) this.findViewById(R.id.textPressureValue);
+
+        DecimalFormat df = new DecimalFormat("###.#");
+        String formattedPressure = df.format(pressure);
+
+        viewPressure.setText(formattedPressure + " mb");
+
     }
 
     public void SetHumidity(double humidity) {
+
+        TextView viewHumidity = (TextView) this.findViewById(R.id.textHumidityValue);
+
+        DecimalFormat df = new DecimalFormat("###.#");
+        String formattedHumidity = df.format(humidity);
+
+        viewHumidity.setText(formattedHumidity + " %");
     }
 }
 
