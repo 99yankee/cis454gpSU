@@ -101,7 +101,7 @@ public class Maps extends FragmentActivity {
         double latitude = 43.0377; //myLocation.getLatitude();
 
         //Get longitude of the current location
-        double longitude = 76.1340; //myLocation.getLongitude();
+        double longitude = -76.1340; //myLocation.getLongitude();
 
         //Create LatLng object for the current location
         LatLng latLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());

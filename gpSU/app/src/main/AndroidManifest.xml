@@ -24,23 +24,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/gpsu_title"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".gpSU"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
 
         <meta-data
@@ -54,10 +44,14 @@
             android:name=".Maps"
             android:label="@string/title_activity_maps" >
         </activity>
+
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
+            android:name=".Activity_CoverPage"
+            android:label="@string/title_activity_cover_page" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

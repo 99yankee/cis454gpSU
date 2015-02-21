@@ -18,6 +18,7 @@ public class gpSU extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.fragment_main);
         setContentView(R.layout.activity_gp_su);
 
         try{
