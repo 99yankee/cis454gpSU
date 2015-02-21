@@ -101,6 +101,6 @@ public class WeatherServiceAsync extends AsyncTask<String, Void, String> {
     }
 
     private double ConvertTemperatureToFahrenheit(double temperature) {
-        return (temperature - 273)* (9/5) + 32;
+        return (temperature - 273) * 1.8 + 32;
     }
 }

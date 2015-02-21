@@ -8,6 +8,8 @@
     <string name="google_maps_key">AIzaSyDt7tiiJD0XogOAjie95tvO1jqKgfUrXd0</string>
 
     <!-- Put your own APP ID here -->
+
+    <!--
     <string name="open_weather_maps_app_id">11111</string>
     <string name="weather_sunny"></string>
     <string name="weather_clear_night"></string>
@@ -18,6 +20,8 @@
     <string name="weather_thunder"></string>
     <string name="weather_drizzle"></string>
     <string name="place_not_found">Sorry, no weather data found.</string>
+    -->
+
     <string name="title_activity_maps">Map</string>
     <string name="mapButton">mapButton</string>
     <string name="weather_pressure">Pressure:</string>
