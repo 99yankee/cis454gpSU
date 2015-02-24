@@ -1,9 +1,7 @@
 package com.cis454.gpsu;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
 
@@ -12,11 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
-import android.widget.Button;
-import android.widget.Toast;
-
-import java.util.HashMap;
 
 //import android.support.v7.widget.LinearLayoutManager;
 //import android.support.v7.widget.RecyclerView;
@@ -68,17 +61,17 @@ public class Activity_CoverPage extends ActionBarActivity implements Fragment_Co
                 break;
             case R.id.busbutton:
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.container, new PlaceholderFragment())
+                        .replace(R.id.busing, new PlaceholderFragment())
                         .addToBackStack(null)
                         .commit();
                 break;
             case R.id.weatherbutton:
-                intent = new Intent(this, gpSU.class);
+                intent = new Intent(this, Activity_Weather.class);
                 startActivity(intent);
                 break;
             case R.id.settingsbutton:
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.container, new PlaceholderFragment())
+                        .replace(R.id.settings, new PlaceholderFragment())
                         .addToBackStack(null)
                         .commit();
                 break;
@@ -126,22 +119,35 @@ public class Activity_CoverPage extends ActionBarActivity implements Fragment_Co
 
         public PlaceholderFragment() {
         }
+        private static final String ARG_OPTION = "section_number";
 
         public static PlaceholderFragment newInstance(int sectionNumber)
         {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            args.putInt(ARG_OPTION, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
 
-        private static final String ARG_SECTION_NUMBER = "section_number";
+
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_coverpage, container, false);
+
+            View rootView = inflater.inflate(R.layout.fragment_busing, container, false);
+
+           /* int option = getArguments().getInt(ARG_OPTION);
+
+            switch (option) {
+                case R.id.busbutton:
+                    rootView = inflater.inflate(R.layout.fragment_busing, container, false);
+                    break;
+                case R.id.settingsbutton:
+                    rootView = inflater.inflate(R.layout.fragment_settings, container, false);
+                    break;
+            }*/
             return rootView;
         }
     }

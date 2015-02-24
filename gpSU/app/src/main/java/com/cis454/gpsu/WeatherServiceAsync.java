@@ -16,14 +16,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class WeatherServiceAsync extends AsyncTask<String, Void, String> {
-    private final gpSU WeatherActivity;
+    private final Activity_Weather WeatherActivity;
 
 // this constructor takes the activity as the parameter.
 // that way we can use the activity later to populate the weather value fields
 // on the screen
 
 
-    public WeatherServiceAsync(gpSU weatherActivity) {
+    public WeatherServiceAsync(Activity_Weather weatherActivity) {
         this.WeatherActivity = weatherActivity;
     }
 

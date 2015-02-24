@@ -104,8 +104,8 @@ public class Maps extends FragmentActivity {
         double longitude = -76.1340; //myLocation.getLongitude();
 
         //Create LatLng object for the current location
-        LatLng latLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-
+        LatLng latLng = new LatLng(latitude, longitude);
+        //LatLng latLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude()
         //Show the current location in Google Map
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
 

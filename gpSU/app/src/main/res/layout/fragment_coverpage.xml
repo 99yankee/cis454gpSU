@@ -13,22 +13,24 @@
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
             android:text="Maps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/mapbutton"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:background="#fff"/>
+            android:background="@drawable/blue_border"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
             android:text="Busing"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/busbutton"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:background="#fff"/>
+            android:background="@drawable/blue_border"/>
 
     </LinearLayout>
 
@@ -43,22 +45,24 @@
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
             android:text="Weather"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/weatherbutton"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:background="#fff"/>
+            android:background="@drawable/blue_border"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
             android:text="Settings"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/settingsbutton"
             android:layout_alignTop="@+id/weatherbutton"
             android:layout_alignLeft="@+id/busbutton"
             android:layout_alignStart="@+id/busbutton"
-            android:background="#fff"/>
+            android:background="@drawable/blue_border"/>
 
     </LinearLayout>
 
@@ -66,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:layout_marginTop="0dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/name"/>
