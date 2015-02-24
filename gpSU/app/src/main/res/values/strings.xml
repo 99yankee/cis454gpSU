@@ -3,11 +3,12 @@
 
     <string name="app_name">gpSU</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="change_city">Change city</string>
-    <string name="google_maps_key">AIzaSyDt7tiiJD0XogOAjie95tvO1jqKgfUrXd0</string>
-
-    <!-- Put your own APP ID here -->
+    <string name="google_maps_key">AIzaSyB8uAxddDABo7CiDPYQOgGsiNudRuxEVc</string>
+    <!-- <string name="google_maps_key">AIzaSyDt7tiiJD0XogOAjie95tvO1jqKgfUrXd0</string>-->
+     <string name="action_busing">Busing</string>
+     <string name="action_settings">Settings</string>
+     <!-- Put your own APP ID here -->
 
 
     <!--
