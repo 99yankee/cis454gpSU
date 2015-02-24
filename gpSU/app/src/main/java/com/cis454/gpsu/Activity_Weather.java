@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -15,13 +14,13 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 
 
-public class gpSU extends ActionBarActivity {
+public class Activity_Weather extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.fragment_main);
-        setContentView(R.layout.activity_gp_su);
+        setContentView(R.layout.activity_weather);
 
         try{
             RetrieveWeather();

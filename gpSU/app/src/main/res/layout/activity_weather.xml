@@ -149,4 +149,17 @@
     </LinearLayout>
 
 
+<<<<<<< HEAD:gpSU/app/src/main/res/layout/activity_gp_su.xml
+=======
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_maps"
+        android:id="@id/default_activity_button"
+        android:layout_below="@+id/details_field"
+        android:layout_centerHorizontal="true" />
+-->
+
+>>>>>>> origin/master:gpSU/app/src/main/res/layout/activity_weather.xml
 </RelativeLayout>
