@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.text.DecimalFormat;
 
@@ -38,8 +40,6 @@ public class gpSU extends ActionBarActivity {
         task.execute(url);
 
     }
-
-
 
 
 
@@ -89,6 +89,7 @@ public class gpSU extends ActionBarActivity {
 
         view.setText(formattedTemperature + " °F");
     }
+
 
     public void SetPressure(double pressure) {
 
