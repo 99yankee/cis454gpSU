@@ -1,7 +1,6 @@
 package com.cis454.gpsu;
 
 import android.content.Intent;
-import android.preference.PreferenceActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,10 +14,8 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 
 
-public class Activity_Weather extends PreferenceActivity {
+public class Activity_Weather extends ActionBarActivity {
 
-
- /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,17 +28,6 @@ public class Activity_Weather extends PreferenceActivity {
         catch (IOException ioe){
             System.out.println("Error!");
         }
-    }
-
-    */
-
-    @Override
-    public void onCreate(Bundle Bundle) {
-        super.onCreate(Bundle);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        String action = getIntent().getAction();
-
-        addPreferencesFromResource(R.xml.activity_weather);
     }
 
     private void RetrieveWeather() throws IOException {
@@ -88,7 +74,7 @@ public class Activity_Weather extends PreferenceActivity {
         //Parses in the JSON info for weather description
         TextView viewDescription = (TextView) this.findViewById(R.id.textDescriptionValue);
         viewDescription.setText(description);
-;
+
     }
 
     public void SetTemperature(double temperature) {
@@ -131,4 +117,8 @@ public class Activity_Weather extends PreferenceActivity {
         viewHumidity.setText(formattedHumidity + " %");
     }
 }
+
+
+
+
 
