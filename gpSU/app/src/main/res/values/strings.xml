@@ -5,10 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="change_city">Change city</string>
     <string name="google_maps_key">AIzaSyB8uAxddDABo7CiDPYQOgGsiNudRuxEVc</string>
-    <!-- <string name="google_maps_key">AIzaSyDt7tiiJD0XogOAjie95tvO1jqKgfUrXd0</string>-->
-     <string name="action_busing">Busing</string>
-     <string name="action_settings">Settings</string>
-     <!-- Put your own APP ID here -->
+    <!-- <string name="google_maps_key">AIzaSyDt7tiiJD0XogOAjie95tvO1jqKgfUrXd0</string> -->
+    <string name="action_busing">Busing</string>
+    <string name="action_settings">Settings</string>
+    <!-- Put your own APP ID here -->
 
 
     <!--
@@ -40,5 +40,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+    <string name="title_activity_directions">Directions</string>
 
 </resources>
