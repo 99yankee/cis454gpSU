@@ -10,9 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.content.Intent;
+import android.widget.EditText;
 
 
 public class Directions extends ActionBarActivity {
+
+    public static final String START = "com.cis454.gpsu.START";
+    public static final String DESTINATION = "com.cis454.gpsu.DESTINATION";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,5 +67,16 @@ public class Directions extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_directions, container, false);
             return rootView;
         }
+    }
+
+    public void direct (View view){
+        Intent intent = new Intent(this, Maps.class);
+        EditText start = (EditText) findViewById(R.id.Start);
+        String starting = start.getText().toString();
+        intent.putExtra(START, starting);
+        EditText end = (EditText) findViewById(R.id.Destination);
+        String destination = end.getText().toString();
+        intent.putExtra(DESTINATION, destination);
+        startActivity(intent);
     }
 }
