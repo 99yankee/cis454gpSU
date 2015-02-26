@@ -41,7 +41,7 @@ public class Activity_Weather extends PreferenceActivity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         String action = getIntent().getAction();
 
-        addPreferencesFromResource(R.xml.activity_weather);
+        //addPreferencesFromResource(R.xml.activity_weather);
     }
 
     private void RetrieveWeather() throws IOException {
