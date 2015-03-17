@@ -41,5 +41,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="title_activity_directions">Directions</string>
+    <string name="title_activity_directory_map">Map</string>
 
 </resources>

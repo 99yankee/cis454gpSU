@@ -70,7 +70,7 @@ public class Directions extends ActionBarActivity {
     }
 
     public void direct (View view){
-        Intent intent = new Intent(this, Maps.class);
+        Intent intent = new Intent(this, directoryMap.class);
         EditText start = (EditText) findViewById(R.id.Start);
         String starting = start.getText().toString();
         intent.putExtra(START, starting);
