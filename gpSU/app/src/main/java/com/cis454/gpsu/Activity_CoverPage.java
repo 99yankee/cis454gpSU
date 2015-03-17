@@ -70,10 +70,11 @@ public class Activity_CoverPage extends ActionBarActivity implements Fragment_Co
                 startActivity(intent);
                 break;
             case R.id.settingsbutton:
-                getFragmentManager().beginTransaction()
+                intent = new Intent(this, Directions.class);
+                startActivity(intent);                /*getFragmentManager().beginTransaction()
                         .replace(R.id.settings, new PlaceholderFragment())
                         .addToBackStack(null)
-                        .commit();
+                        .commit();*/
                 break;
 
             default:

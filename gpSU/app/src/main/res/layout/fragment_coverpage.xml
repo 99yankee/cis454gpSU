@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="0.5"
-            android:text="Settings"
+            android:text="Directions"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/settingsbutton"
             android:layout_alignTop="@+id/weatherbutton"
