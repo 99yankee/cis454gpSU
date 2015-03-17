@@ -1,6 +1,9 @@
 package com.cis454.gpsu;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -62,6 +65,26 @@ public class directoryMap extends FragmentActivity {
             e.printStackTrace();
         }
 
+        /*LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        Location myLocation = locationManager.getLastKnownLocation(provider);
+
+        double latitude = myLocation.getLatitude();
+
+        // Get longitude of the current location
+        double longitude = myLocation.getLongitude();
+
+        // Create a LatLng object for the current location
+        LatLng latLng = new LatLng(latitude, longitude);
+
+        // Show the current location in Google Map
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+
+        // Zoom in the Google Map
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("You are here!").snippet("Consider yourself located"));
+        */
+        onPostExecute(routes);
         setUpMapIfNeeded();
     }
     private String getMapsApiDirectionsUrl() {
@@ -105,6 +128,34 @@ public class directoryMap extends FragmentActivity {
                 setUpMap();
             }
         }
+    }
+
+    protected void onPostExecute(List<List<HashMap<String, String>>> routes) {
+        ArrayList<LatLng> points = null;
+        PolylineOptions polyLineOptions = null;
+
+        // traversing through routes
+        for (int i = 0; i < routes.size(); i++) {
+            points = new ArrayList<LatLng>();
+            polyLineOptions = new PolylineOptions();
+            List<HashMap<String, String>> path = routes.get(i);
+
+            for (int j = 0; j < path.size(); j++) {
+                HashMap<String, String> point = path.get(j);
+
+                double lat = Double.parseDouble(point.get("lat"));
+                double lng = Double.parseDouble(point.get("lng"));
+                LatLng position = new LatLng(lat, lng);
+
+                points.add(position);
+            }
+
+            polyLineOptions.addAll(points);
+            polyLineOptions.width(2);
+            polyLineOptions.color(Color.BLUE);
+        }
+
+        mMap.addPolyline(polyLineOptions);
     }
 
     /**
